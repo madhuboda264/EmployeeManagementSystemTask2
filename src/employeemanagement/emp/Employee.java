@@ -1,0 +1,30 @@
+package employeemanagement.emp;
+
+import employeemanagement.salary.Bonus;
+import employeemanagement.EmployeeType;
+import employeemanagement.exception.InvalidSalaryException;
+
+public abstract class Employee extends EmployeeType implements Bonus {
+    private int employeeId;
+    private String employeeName;
+    private double salary;
+    private String department;
+
+
+    Employee(int employeeId,String employeeName,double salary,String department) throws InvalidSalaryException {
+        if (salary < 0){
+            throw new InvalidSalaryException("Salary cannot be negative.....");
+        }
+        this.employeeId=employeeId;
+        this.employeeName=employeeName;
+        this.salary=salary;
+        this.department=department;
+    }
+    public void displayEmployees(){
+        System.out.println("Emplayee ID: "+employeeId);
+        System.out.println("Employee Name: "+employeeName);
+        System.out.println("Employee Salary: "+salary);
+        System.out.println("Employee Department");
+    }
+
+}
