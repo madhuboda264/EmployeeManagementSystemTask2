@@ -11,6 +11,7 @@ Create a console-based employee management system that stores employee details, 
 ## Project Description
 
 This system allows the user to enter employee information including:
+
 - Employee ID
 - Employee Name
 - Salary
@@ -24,7 +25,7 @@ The program validates whether the salary is valid and prevents invalid negative 
 - Employee data collection through the console
 - Salary validation with custom exception handling
 - Developer-specific attributes and behavior
-- Bonus calculation based on salary
+- Developer bonus calculated as 10% of the employee's stored salary
 - Display of employee information
 - Inheritance and abstraction design
 - Package-based organization
@@ -33,37 +34,46 @@ The program validates whether the salary is valid and prevents invalid negative 
 ## OOP Concepts Implemented
 
 ### 1. Classes and Objects
+
 - Employee details are represented as Java classes.
 - Objects are created to represent individual employees.
 
 ### 2. Constructors
+
 - Constructors are used to initialize employee data during object creation.
 
 ### 3. Encapsulation
+
 - Data fields are kept private to restrict direct access.
 - Access is controlled through class logic and constructor initialization.
 
 ### 4. Inheritance
+
 - The Developer class inherits from the Employee class.
 - This demonstrates reusability and specialization of behavior.
 
 ### 5. Abstraction
+
 - The EmployeeType class is abstract.
 - Common employee behavior is defined at the abstract level.
 
 ### 6. Interfaces
+
 - The Bonus interface defines a contract for bonus calculation.
 - Classes implementing the interface provide the concrete implementation.
 
 ### 7. Polymorphism
-- Method overriding is used to provide different implementations of common behavior.
-- The application demonstrates runtime behavior based on the object type.
+
+- `Developer` overrides `calculateWork()` from the abstract `EmployeeType` class.
+- The application stores a `Developer` object in an `EmployeeType` reference and calls `calculateWork()`, demonstrating runtime polymorphism.
 
 ### 8. Exception Handling
+
 - Negative salaries are rejected using InvalidSalaryException.
 - The project handles errors gracefully without crashing the program.
 
 ### 9. Packages
+
 - Code is organized into logical packages such as:
   - employeemanagement
   - employeemanagement.emp
@@ -72,6 +82,7 @@ The program validates whether the salary is valid and prevents invalid negative 
   - employeemanagement.salary
 
 ### 10. Clean-Code Principles
+
 - Meaningful naming
 - Small and focused classes
 - Separation of responsibilities
@@ -121,9 +132,22 @@ javac -d out (Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullNa
 java -cp out employeemanagement.EmployeeManagementSystem
 ```
 
+## Test Case Screenshots
+
+The screenshots below show two successful runs. Both include the entered department and programming language, and the displayed developer bonus is 10% of the stored salary.
+
+### Test Case 1
+
+![Test case 1: employee with a salary of 40,000](img.png)
+
+### Test Case 2
+
+![Test case 2: employee with a salary of 100,000](img_1.png)
+
 ## Example Flow
 
 The console asks for:
+
 - Employee ID
 - Employee name
 - Salary
