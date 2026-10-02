@@ -134,15 +134,25 @@ java -cp out employeemanagement.EmployeeManagementSystem
 
 ## Test Case Screenshots
 
-The screenshots below show two successful runs. Both include the entered department and programming language, and the displayed developer bonus is 10% of the stored salary.
+These cases cover valid salaries and negative-salary validation.
 
 ### Test Case 1
+
+Valid salary: displays employee details and calculates a 10% bonus (40,000 -> 4,000).
 
 ![Test case 1: employee with a salary of 40,000](img.png)
 
 ### Test Case 2
 
+Valid salary: displays employee details and calculates a 10% bonus (100,000 -> 10,000).
+
 ![Test case 2: employee with a salary of 100,000](img_1.png)
+
+### Test Case 3
+
+Negative salary: rejects -50,000 and displays the custom validation error.
+
+![Test case 3: negative salary rejected](image.png)
 
 ## Example Flow
 
